@@ -49,19 +49,19 @@
         <div class="conteudo">
             <section>
                 <h2>Sobre a Monitoria</h2>
-                <article>
+                <article class="conteudo__sobre">
                     <p>Bem-vindos à monitoria de algoritmo! Este espaço foi criado para auxiliar os estudantes no aprendizado dos conceitos fundamentais de programação e estruturas de dados.</p>
-                    <ul>
+                    <ul class="sobre__lista">
                         <li>
-                            <img src="" alt=""/>
+                            <img src="img/suporte.svg" alt=""/>
                             Suporte individualizado
                         </li>
                         <li>
-                            <img src="" alt=""/>
+                            <img src="img/relogio.svg" alt=""/>
                             Horarios fixos
                         </li>
                         <li>
-                            <img src="" alt=""/>
+                            <img src="img/download-azul.svg" alt=""/>
                             Material complementar
                         </li>
                     </ul>
@@ -72,22 +72,51 @@
                 <article>
                     <h3>Estruturas de controle</h3>
                     <p>Aprenda sobre condicionais, loops e estruturas de decisão.</p>
-                    <pre>
-            <code>
-            SE (idade &ge; 18) ENTÃO
-                ESCREVA "Maior de idade"
-            SENÃO
-                Escreva "Menor de idade"
-            FIM SE
-            </code>
-                    </pre>
+<pre>
+<span>Exemplo - Estrutura Condicional</span>
+<code>SE (idade &ge; 18) ENTÃO
+    ESCREVA "Maior de idade"
+SENÃO
+    Escreva "Menor de idade"
+FIM SE</code></pre>
+                </article>
+                <article>
+                    <h3>Algoritmos de Ordenação</h3>
+                    <p>Bubble Sort, Selection Sort, Insertion Sort e algoritmos mais avançados.</p>
+<pre>
+<span>Exemplo - Bubble Sort:</span>
+<code>PARA i = 0 ATÉ n-1 FAÇA
+    PARA j = 0 ATÉ n-i-2 FAÇA
+        SE vetor[j] > vetor[j+1] ENTÃO
+            trocar(vetor[j], vetor[j+1])
+        FIM SE
+    FIM PARA
+FIM PARA</code>
+</pre>
+                </article>
+                <article>
+                    <h3>Estrutura de Dados</h3>
+                    <p>Listas, pilhas, filas, árvores e grafos.</p>
+<pre>
+<span>Exemplo - Pilha (Push):</span>
+<code>PROCEDIMENTO empilhar(elemento)
+    SE topo < TAMANHO_MAX ENTÃO
+        topo = topo + 1
+        pilha[topo] = elemento
+    SENÃO
+        ESCREVA "Pilha cheia"
+    FIM SE
+FIM PROCEDIMENTO</code>
+</pre>
                 </article>
             </section>
-            <section>
+            <section class="conteudo__lista">
                 <h2>Listas de Exercícios</h2>
-                <p>Faça o download das listas de exercícios e pratique o conteúdo estudado.</p>
-                <a href="#" download>Lista 1</a>
-                <a href="#" download>Lista 2</a>
+                <article>
+                    <p>Faça o download das listas de exercícios e pratique o conteúdo estudado.</p>
+                    <a href="#" download>Lista de Exercícios 1</a>
+                    <a href="#" download>Lista de Exercícios 2</a>
+                </article>
             </section>
             <section>
                 

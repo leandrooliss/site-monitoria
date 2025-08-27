@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+@import url('./styles/conteudo.css');
 
 :root {
     --cor-fundo: #F8F8F8;
-    --cor-fundo-div: #e9ebee;
+    --cor-fundo-div: #E9EAF2;
     --cor-destaque: #475EF2;
-    --cor-hover: #7666e9;
+    --cor-hover: #a2b6ff;
     --cor-fonte: #090D1F;
-    --cor-fonte-claro: #636a74; 
+    --cor-fonte-claro: #595959; 
     --fonte: Geist, sans-serif;
     --fonte-secundaria: Geist, Mono, sans-serif;
 }
@@ -16,6 +17,8 @@
     padding: 0px;
     box-sizing: border-box;
     list-style: none;
+    font-family: var(--fonte);
+    color: var(--cor-fonte-claro);
 }
 
 body{
@@ -95,3 +98,25 @@ main {
 }
 
 
+
+.conteudo {
+    padding: 1.5rem;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor-fonte-claro);
+    font-family: var(--fonte);
+    font-weight: 400;
+    background-color: var(--cor-fundo);
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 5px 0.8px rgba(0, 0, 0, 0.02);
+}
+
+a:not(:last-child) {
+    margin-right: 1rem;
+}
