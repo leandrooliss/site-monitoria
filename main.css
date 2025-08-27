@@ -86,7 +86,7 @@ main {
 }
 
 .menu__item:hover{
-    background-color: var(--azul-secundario);
+    background-color: var(--cor-hover);
 }
 
 .item__texto{
