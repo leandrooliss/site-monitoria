@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+
+:root {
+    --cor-principal: #215BA6;
+    --cor-destaque: #475EF2;
+    --cor-fonte: #253140;
+    --cor-fonte-claro: #636a74;
+    --cor-fundo-div: #EBEFF2;
+    --cor-fundo: white;
+    --fonte: Geist, sans-serif;
+    --fonte-secundaria: Geist, Mono;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+img {
+    background-color: #475EF2;
+
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: .8rem;
+    padding: 1rem;
+    background-color: var(--cor-fundo-div);
+    margin-bottom: 0.2em;
+}
+
+.cabecalho__logo {
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.cabecalho__titulo{
+    font-family: var(--fonte);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-fonte);
+}
+
+.cabecalho__texto{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--cor-fonte-claro);
+}
+
+main {
+    display: flex;
+}
