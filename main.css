@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
 
 :root {
-    --cor-principal: #215BA6;
+    --cor-fundo: #F8F8F8;
+    --cor-fundo-div: #e9ebee;
+    --cor-destaque: #475EF2;
+    --azul-secundario: #7666e9;
+    --cor-fonte: #090D1F;
+    --cor-fonte-claro: #636a74; 
+    --fonte: Geist, sans-serif;
+    --fonte-secundaria: Geist, Mono, sans-serif;
+ 
+    /* --cor-principal: #215BA6;
     --cor-destaque: #475EF2;
     --cor-fonte: #253140;
     --cor-fonte-claro: #636a74;
     --cor-fundo-div: #EBEFF2;
-    --cor-fundo: white;
-    --fonte: Geist, sans-serif;
-    --fonte-secundaria: Geist, Mono;
+    --cor-fundo: white; */
 }
 
 *{
@@ -19,9 +26,10 @@
 
 body{
     background-color: var(--cor-fundo);
+    display: grid;
 }
 
-img {
+.cabecalho__logo {
     background-color: #475EF2;
 
 }
@@ -33,7 +41,7 @@ img {
     gap: .8rem;
     padding: 1rem;
     background-color: var(--cor-fundo-div);
-    margin-bottom: 0.2em;
+    border-bottom: 1px solid lightgrey;
 }
 
 .cabecalho__logo {
@@ -57,4 +65,11 @@ img {
 
 main {
     display: flex;
+}
+
+.container__menu{
+    background-color: var(--cor-fundo-div);
+    border-right: 1px solid lightgrey;
+    display: flex;
+
 }
