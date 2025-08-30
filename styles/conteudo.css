@@ -6,6 +6,7 @@ article {
     line-height: 1.5rem;
     max-width: 70vw;
     margin-bottom: 1.5rem;
+    box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.03);
 }
 
 .sobre__lista {
@@ -35,6 +36,10 @@ h3 {
     margin-bottom: 0;
 }
 
+.conteudo__lista p {
+    margin-bottom: 1.2rem;
+}
+
 article pre {
     padding: 1rem;
     font-size: 0.9rem;
@@ -46,4 +51,36 @@ article pre span {
 
 article code {
     font-family: var(--fonte-secundaria);
+}
+
+article div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70vw;
+}
+
+.conteudo__horario__container {
+    display: flex;
+    max-width: 70vw;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.conteudo__horario__container article {
+    width: calc(50% - 0.75rem);
+    max-width: none;
+}
+
+.conteudo__horario__last {
+    margin-bottom: 1rem;
+}
+
+.conteudo__horario span {
+    color: var(--cor-fonte);
+}
+
+.conteudo__horario__destaque {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
