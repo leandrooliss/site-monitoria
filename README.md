@@ -32,8 +32,8 @@ O conteúdo é dividido em seções, incluindo:
 
 ## 🌐 Demonstração <a id="demonstracao"></a>
 
-📷 *Adicione aqui prints da interface do site*  
-🔗 *Adicione aqui o link de deploy (GitHub Pages, Vercel, Netlify, etc.)*
+📷 ![Demonstração do site](./img/print-site.png)
+🔗 *Aqui ficará o futuro deploy do site*
 
 ---
 
