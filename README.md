@@ -26,7 +26,7 @@ O conteúdo é dividido em seções, incluindo:
 - Sobre a Monitoria  
 - Conteúdo da Disciplina *(estruturas de controle, algoritmos de ordenação, estruturas de dados, etc.)*  
 - Listas de Exercícios para download  
-- Horários e Contato da monitoria  
+- Horários e Contato da monitora  
 
 ---
 
