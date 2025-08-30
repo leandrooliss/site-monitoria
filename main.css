@@ -109,7 +109,7 @@ main {
 a {
     display: inline-block;
     text-decoration: none;
-    color: var(--cor-fonte-claro);
+    color: var(--cor-fonte);
     font-family: var(--fonte);
     font-weight: 400;
     background-color: var(--cor-fundo);
@@ -118,6 +118,16 @@ a {
     text-align: center;
     border-radius: 0.5rem;
     box-shadow: 4px 4px 5px 0.8px rgba(0, 0, 0, 0.02);
+    transition: background-color .15s ease-in-out;
+}
+
+a:hover {
+    background-color: var(--cor-hover);
+}
+
+a:active {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo-div);
 }
 
 a:not(:last-child) {
