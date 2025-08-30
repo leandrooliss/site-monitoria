@@ -39,6 +39,9 @@ body{
     padding: 1rem;
     background-color: var(--cor-fundo-div);
     border-bottom: 1px solid lightgrey;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 .cabecalho__logo {
@@ -48,20 +51,22 @@ body{
 
 .cabecalho__titulo{
     font-family: var(--fonte);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-fonte);
 }
 
 .cabecalho__texto{
     font-family: var(--fonte);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--cor-fonte-claro);
 }
 
 main {
     display: flex;
+    margin-top: 5.3rem;
+    z-index: 0;
 }
 
 .container__menu{
