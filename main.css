@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
 @import url('./styles/conteudo.css');
+@import url('./styles/footer.css');
 
 :root {
     --cor-fundo: #F8F8F8;

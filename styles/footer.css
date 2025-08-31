@@ -1,0 +1,30 @@
+.rodape{
+    width: 100%;
+    background-color: var(--cor-fundo-div);
+    border-top: 1px solid lightgrey;
+    padding: 2rem 4.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rodape__titulo{
+    margin-bottom: 1rem;
+}
+
+.rodape__item{
+    font-size: 14px;
+    color: var(--cor-fonte-claro);
+}
+
+.rodape__item:not(:last-child){
+    margin-bottom: 0.5rem;
+}
+
+.rodape__texto{
+    grid-column: 1 / 4;
+    margin-top: 2.0rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid lightgrey;
+    text-align: center;
+    font-size: 14px;
+}
