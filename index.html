@@ -46,10 +46,11 @@
                 </ul>
             </nav>
         </aside>
+
         <div class="conteudo">
-            <section>
-                <h2>Sobre a Monitoria</h2>
-                <article class="conteudo__sobre">
+            <section class="conteudo__sobre">
+                <h2 class="conteudo__titulo">Sobre a Monitoria</h2>
+                <article class="conteudo__artigo">
                     <p>Bem-vindos à monitoria de algoritmo! Este espaço foi criado para auxiliar os estudantes no aprendizado dos conceitos fundamentais de programação e estruturas de dados.</p>
                     <ul class="sobre__lista">
                         <li>
@@ -67,12 +68,13 @@
                     </ul>
                 </article>
             </section>
+
             <section>
-                <h2>Conteúdo da Disciplina</h2>
-                <article>
-                    <h3>Estruturas de controle</h3>
+                <h2 class="conteudo__titulo">Conteúdo da Disciplina</h2>
+                <article class="conteudo__artigo">
+                    <h3 class="conteudo__subtitulo">Estruturas de controle</h3>
                     <p>Aprenda sobre condicionais, loops e estruturas de decisão.</p>
-<pre>
+<pre class="conteudo__codigo">
 <span>Exemplo - Estrutura Condicional</span>
 <code>SE (idade &ge; 18) ENTÃO
     ESCREVA "Maior de idade"
@@ -80,10 +82,10 @@ SENÃO
     Escreva "Menor de idade"
 FIM SE</code></pre>
                 </article>
-                <article>
-                    <h3>Algoritmos de Ordenação</h3>
+                <article class="conteudo__artigo">
+                    <h3 class="conteudo__subtitulo">Algoritmos de Ordenação</h3>
                     <p>Bubble Sort, Selection Sort, Insertion Sort e algoritmos mais avançados.</p>
-<pre>
+<pre class="conteudo__codigo">
 <span>Exemplo - Bubble Sort:</span>
 <code>PARA i = 0 ATÉ n-1 FAÇA
     PARA j = 0 ATÉ n-i-2 FAÇA
@@ -91,13 +93,12 @@ FIM SE</code></pre>
             trocar(vetor[j], vetor[j+1])
         FIM SE
     FIM PARA
-FIM PARA</code>
-</pre>
+FIM PARA</code></pre>
                 </article>
-                <article>
-                    <h3>Estrutura de Dados</h3>
+                <article class="conteudo__artigo">
+                    <h3 class="conteudo__subtitulo">Estrutura de Dados</h3>
                     <p>Listas, pilhas, filas, árvores e grafos.</p>
-<pre>
+<pre class="conteudo__codigo">
 <span>Exemplo - Pilha (Push):</span>
 <code>PROCEDIMENTO empilhar(elemento)
     SE topo < TAMANHO_MAX ENTÃO
@@ -106,34 +107,35 @@ FIM PARA</code>
     SENÃO
         ESCREVA "Pilha cheia"
     FIM SE
-FIM PROCEDIMENTO</code>
-</pre>
+FIM PROCEDIMENTO</code></pre>
                 </article>
             </section>
-            <section class="conteudo__lista">
-                <h2>Listas de Exercícios</h2>
-                <article>
+
+            <section class="conteudo__exercicios">
+                <h2 class="conteudo__titulo">Listas de Exercícios</h2>
+                <article class="conteudo__artigo">
                     <p>Faça o download das listas de exercícios e pratique o conteúdo estudado.</p>
-                    <a href="#" download><img src="img/download-preto.svg" alt="Ícone de download"/>Lista de Exercícios 1</a>
-                    <a href="#" download><img src="img/download-preto.svg" alt="Ícone de download"/>Lista de Exercícios 2</a>
+                    <a href="#" download class="exercicios__lista"><img src="img/download-preto.svg" alt="Ícone de download"/>Lista de Exercícios 1</a>
+                    <a href="#" download class="exercicios__lista"><img src="img/download-preto.svg" alt="Ícone de download"/>Lista de Exercícios 2</a>
                 </article>
             </section>
-            <section class="conteudo__horario">
-                <h2>Horários e Contato</h2>
-                <div class="conteudo__horario__container">
-                    <article>
-                        <h3>Horários</h3>
-                        <span class="conteudo__horario__destaque">Presencial:</span>
+
+            <section class="conteudo__info">
+                <h2 class="conteudo__titulo">Horários e Contato</h2>
+                <div class="info__container">
+                    <article class="conteudo__artigo">
+                        <h3 class="conteudo__subtitulo">Horários</h3>
+                        <span class="info__destaque">Presencial:</span>
                         <div><span>Terça-Feira</span><p>11h - 13h</p></div>
-                        <div class="conteudo__horario__last"><span>Quinta-Feira</span><p>11h - 13h</p></div>
-                        <span class="conteudo__horario__destaque">On-line:</span>
-                        <div class="conteudo__horario__last"><span>Quinta-Feira</span><p>15h - 19h</p></div>
+                        <div class="info__last"><span>Quinta-Feira</span><p>11h - 13h</p></div>
+                        <span class="info__destaque">On-line:</span>
+                        <div class="info__last"><span>Quinta-Feira</span><p>15h - 19h</p></div>
                     </article>
-                    <article>
-                        <h3>Contato</h3>
-                        <span class="conteudo__horario__destaque">Local:</span>
-                        <p class="paragrafo__fatec">Fatec Rubens Lara</p>
-                        <span class="conteudo__horario__destaque">WhatsApp:</span>
+                    <article class="conteudo__artigo">
+                        <h3 class="conteudo__subtitulo">Contato</h3>
+                        <span class="info__destaque">Local:</span>
+                        <p class="info__fatec">Fatec Rubens Lara</p>
+                        <span class="info__destaque">WhatsApp:</span>
                         <p>(13) 97421-5790</p>
                     </article>
                 </div>

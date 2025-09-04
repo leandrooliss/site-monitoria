@@ -1,8 +1,67 @@
+/* GERAL --------------------------------------------------------------------------------------- */
+
 .conteudo {
     padding: 1.5rem;
 }
 
-a {
+.conteudo__artigo {
+    background-color: var(--cor-fundo-div);
+    border: 1px solid lightgrey;
+    border-radius: 0.7rem;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    max-width: 70vw;
+    margin-bottom: 1.5rem;
+    box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.03);
+}
+
+.conteudo__titulo {
+    color: var(--cor-fonte);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.conteudo__subtitulo {
+    color: var(--cor-fonte);
+    margin-bottom: 1.5rem;
+}
+
+/* SOBRE -------------------------------------------------------------------------------------------- */
+
+.sobre__lista {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.sobre__lista li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* CONTEUDO ----------------------------------------------------------------------------------------- */
+
+.conteudo__codigo {
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.conteudo__codigo span {
+    font-weight: 600;
+}
+
+.conteudo__codigo code {
+    font-family: var(--fonte-secundaria);
+}
+
+/* LISTA DE EXERCICIOS ----------------------------------------------------------------------------- */
+
+.conteudo__exercicios p {
+    margin-bottom: 1.2rem;
+}
+
+.exercicios__lista{
     display: inline-block;
     text-decoration: none;
     color: var(--cor-fonte);
@@ -17,106 +76,50 @@ a {
     transition: background-color .15s ease-in-out;
 }
 
-a:hover {
+.exercicios__lista:hover {
     background-color: var(--cor-hover);
 }
 
-a:active {
+.exercicios__lista:active {
     background-color: var(--cor-destaque);
     color: var(--cor-fundo-div);
 }
 
-a:not(:last-child) {
+.exercicios__lista:not(:last-child) {
     margin-right: 1rem;
 }
 
-article {
-    background-color: var(--cor-fundo-div);
-    border: 1px solid lightgrey;
-    border-radius: 0.7rem;
-    padding: 1.5rem;
-    line-height: 1.5rem;
-    max-width: 70vw;
-    margin-bottom: 1.5rem;
-    box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.03);
-}
 
-.sobre__lista {
+/* HORARIO E CONTATO ------------------------------------------------------------------------------ */
+
+.info__container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-}
-
-.sobre__lista li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-h2 {
-    color: var(--cor-fonte);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-}
-
-h3 {
-    color: var(--cor-fonte);
-    margin-bottom: 1.5rem;
-}
-
-.conteudo__lista {
-    margin-bottom: 0;
-}
-
-.conteudo__lista p {
-    margin-bottom: 1.2rem;
-}
-
-article pre {
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-article pre span {
-    font-weight: 600;
-}
-
-article code {
-    font-family: var(--fonte-secundaria);
-}
-
-article div {
-    display: flex;
-    justify-content: space-between;
-    max-width: 70vw;
-}
-
-.conteudo__horario__container {
-    display: flex;
-    max-width: 70vw;
     gap: 1.5rem;
-    align-items: stretch;
 }
 
-.conteudo__horario__container article {
+.info__container article {
     width: calc(50% - 0.75rem);
-    max-width: none;
 }
 
-.conteudo__horario__last {
-    margin-bottom: 1rem;
-}
-
-.conteudo__horario span {
+.conteudo__info span {
     color: var(--cor-fonte);
 }
 
-.conteudo__horario__destaque {
+.info__destaque {
     display: inline-block;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.paragrafo__fatec {
+.conteudo__info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__last {
+    margin-bottom: 1rem;
+}
+
+.info__fatec {
     margin-bottom: 1rem;
 }
