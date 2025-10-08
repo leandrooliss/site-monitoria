@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+@import url('./styles/cabecalho.css');
+@import url('./styles/menu.css');
 @import url('./styles/conteudo.css');
 @import url('./styles/footer.css');
 
@@ -24,113 +26,10 @@
 
 body{
     background-color: var(--cor-fundo);
-    display: grid;
-}
-
-.cabecalho__logo {
-    background-color: #475EF2;
-}
-
-.cabecalho{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: .8rem;
-    padding: 1rem;
-    background-color: var(--cor-fundo-div);
-    border-bottom: 1px solid lightgrey;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-.cabecalho__logo {
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-}
-
-.cabecalho__titulo{
-    font-family: var(--fonte);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--cor-fonte);
-}
-
-.cabecalho__texto{
-    font-family: var(--fonte);
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--cor-fonte-claro);
 }
 
 main {
     display: flex;
     margin-top: 5.3rem;
     z-index: 0;
-}
-
-.container__menu{
-    background-color: var(--cor-fundo-div);
-    border-right: 1px solid lightgrey;
-    padding: 0.7rem;
-}
-
-.menu{
-    position: sticky;
-    top: 6rem;
-}
-
-.menu__item{
-    display: grid;
-    grid-template-columns: 24px auto 24px;
-    gap: 0.8rem;
-    align-items: center;
-    max-width: 230px;
-    min-width: 200px;
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    color: var(--cor-fonte);
-    font-weight: 500;
-    transition: background-color .15s ease-in-out;
-}
-
-.menu__item:not(:last-child){
-    margin-bottom: 0.5rem;
-}
-
-.menu__item:hover{
-    background-color: var(--cor-hover);
-}
-
-.conteudo {
-    padding: 1.5rem;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--cor-fonte);
-    font-family: var(--fonte);
-    font-weight: 400;
-    background-color: var(--cor-fundo);
-    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
-    width: 15rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    box-shadow: 4px 4px 5px 0.8px rgba(0, 0, 0, 0.02);
-    transition: background-color .15s ease-in-out;
-}
-
-a:hover {
-    background-color: var(--cor-hover);
-}
-
-a:active {
-    background-color: var(--cor-destaque);
-    color: var(--cor-fundo-div);
-}
-
-a:not(:last-child) {
-    margin-right: 1rem;
 }

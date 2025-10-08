@@ -1,4 +1,10 @@
-article {
+/* GERAL --------------------------------------------------------------------------------------- */
+
+.conteudo {
+    padding: 1.5rem;
+}
+
+.conteudo__artigo {
     background-color: var(--cor-fundo-div);
     border: 1px solid lightgrey;
     border-radius: 0.7rem;
@@ -8,6 +14,19 @@ article {
     margin-bottom: 1.5rem;
     box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.03);
 }
+
+.conteudo__titulo {
+    color: var(--cor-fonte);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.conteudo__subtitulo {
+    color: var(--cor-fonte);
+    margin-bottom: 1.5rem;
+}
+
+/* SOBRE -------------------------------------------------------------------------------------------- */
 
 .sobre__lista {
     display: flex;
@@ -21,70 +40,86 @@ article {
     gap: 0.5rem;
 }
 
-h2 {
-    color: var(--cor-fonte);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-}
+/* CONTEUDO ----------------------------------------------------------------------------------------- */
 
-h3 {
-    color: var(--cor-fonte);
-    margin-bottom: 1.5rem;
-}
-
-.conteudo__lista {
-    margin-bottom: 0;
-}
-
-.conteudo__lista p {
-    margin-bottom: 1.2rem;
-}
-
-article pre {
+.conteudo__codigo {
     padding: 1rem;
     font-size: 0.9rem;
 }
 
-article pre span {
+.conteudo__codigo span {
     font-weight: 600;
 }
 
-article code {
+.conteudo__codigo code {
     font-family: var(--fonte-secundaria);
 }
 
-article div {
-    display: flex;
-    justify-content: space-between;
-    max-width: 70vw;
+/* LISTA DE EXERCICIOS ----------------------------------------------------------------------------- */
+
+.conteudo__exercicios p {
+    margin-bottom: 1.2rem;
 }
 
-.conteudo__horario__container {
+.exercicios__lista{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font-family: var(--fonte);
+    font-weight: 400;
+    background-color: var(--cor-fundo);
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 5px 0.8px rgba(0, 0, 0, 0.02);
+    transition: background-color .15s ease-in-out;
+}
+
+.exercicios__lista:hover {
+    background-color: var(--cor-hover);
+}
+
+.exercicios__lista:active {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo-div);
+}
+
+.exercicios__lista:not(:last-child) {
+    margin-right: 1rem;
+}
+
+
+/* HORARIO E CONTATO ------------------------------------------------------------------------------ */
+
+.info__container {
     display: flex;
-    max-width: 70vw;
     gap: 1.5rem;
-    align-items: stretch;
 }
 
-.conteudo__horario__container article {
+.info__container article {
     width: calc(50% - 0.75rem);
-    max-width: none;
 }
 
-.conteudo__horario__last {
-    margin-bottom: 1rem;
-}
-
-.conteudo__horario span {
+.conteudo__info span {
     color: var(--cor-fonte);
 }
 
-.conteudo__horario__destaque {
+.info__destaque {
     display: inline-block;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.paragrafo__fatec {
+.conteudo__info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info__last {
+    margin-bottom: 1rem;
+}
+
+.info__fatec {
     margin-bottom: 1rem;
 }

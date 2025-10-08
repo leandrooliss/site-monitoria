@@ -1,0 +1,33 @@
+.container__menu{
+    background-color: var(--cor-fundo-div);
+    border-right: 1px solid lightgrey;
+    padding: 0.7rem;
+}
+
+.menu{
+    position: sticky;
+    top: 6rem;
+}
+
+.menu__item{
+    display: grid;
+    grid-template-columns: 24px auto 24px;
+    gap: 0.8rem;
+    align-items: center;
+    max-width: 230px;
+    min-width: 200px;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: var(--cor-fonte);
+    font-weight: 500;
+    transition: background-color .15s ease-in-out;
+}
+
+.menu__item:not(:last-child){
+    margin-bottom: 0.5rem;
+}
+
+.menu__item:hover{
+    background-color: var(--cor-hover);
+}
