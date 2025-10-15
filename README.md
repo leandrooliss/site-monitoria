@@ -56,7 +56,7 @@ O conteúdo é dividido em seções, incluindo:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/site-monitoria.git
+git clone https://github.com/leandrooliss/site-monitoria.git
 ```
 
 Acesse o diretório:
