@@ -10,7 +10,7 @@
     border-radius: 0.7rem;
     padding: 1.5rem;
     line-height: 1.5rem;
-    max-width: 70vw;
+    max-width: 80vw;
     margin-bottom: 1.5rem;
     box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.03);
 }
@@ -62,7 +62,9 @@
 }
 
 .exercicios__lista{
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: var(--cor-fonte);
     font-family: var(--fonte);
@@ -88,6 +90,7 @@
 .exercicios__lista:not(:last-child) {
     margin-right: 1rem;
 }
+
 
 
 /* HORARIO E CONTATO ------------------------------------------------------------------------------ */
