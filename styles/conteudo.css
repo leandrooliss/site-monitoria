@@ -147,3 +147,8 @@ html {
 .info__fatec {
     margin-bottom: 1rem;
 }
+
+#link__grupo {
+    font-size: smaller;
+    color: var(--cor-fonte-claro);
+}
