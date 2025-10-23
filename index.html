@@ -23,22 +23,22 @@
         <aside class="container__menu">
             <nav class="menu">
                 <ul class="menu__lista">
-                    <li class="menu__item">
+                    <li class="menu__item" onclick="Mostra('conteudo__sobre')">
                         <img src="img/sobre.svg" alt="Ícone do sobre a monitoria" />
                         Sobre a Monitoria
                         <img src="img/seta.svg" alt="Ícone de uma seta apontada para direita" />
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" onclick="Mostra('conteudo__algoritmos')">
                         <img src="img/conteudo.svg" alt="Ícone do conteúdo da disciplina" />
                         Conteúdo da Disciplina
                         <img src="img/seta.svg" alt="Ícone de uma seta apontada para direita" />
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" onclick="Mostra('conteudo__exercicios')">
                         <img src="img/exercicios.svg" alt="Ícone da lista de exercícios" />
                         Lista de Exercícios
                         <img src="img/seta.svg" alt="Ícone de uma seta apontada para direita" />
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" onclick="Mostra('conteudo__info')">
                         <img src="img/horario.svg" alt="Ícone do horário e contaos" />
                         Horários e Contato
                         <img src="img/seta.svg" alt="Ícone de uma seta apontada para direita" />
@@ -48,7 +48,7 @@
         </aside>
 
         <div class="conteudo">
-            <section class="conteudo__sobre">
+            <section class="conteudo__sobre" id="conteudo__sobre">
                 <h2 class="conteudo__titulo">Sobre a Monitoria</h2>
                 <article class="conteudo__artigo">
                     <p>Bem-vindos à monitoria de algoritmo! Este espaço foi criado para auxiliar os estudantes no aprendizado dos conceitos fundamentais de programação e estruturas de dados.</p>
@@ -69,7 +69,7 @@
                 </article>
             </section>
 
-            <section>
+            <section id="conteudo__algoritmos">
                 <h2 class="conteudo__titulo">Conteúdo da Disciplina</h2>
                 <article class="conteudo__artigo">
                     <h3 class="conteudo__subtitulo">Estruturas de controle</h3>
@@ -111,7 +111,7 @@ FIM PROCEDIMENTO</code></pre>
                 </article>
             </section>
 
-            <section class="conteudo__exercicios">
+            <section class="conteudo__exercicios" id="conteudo__exercicios">
                 <h2 class="conteudo__titulo">Listas de Exercícios</h2>
                 <article class="conteudo__artigo">
                     <p>Faça o download das listas de exercícios e pratique o conteúdo estudado.</p>
@@ -120,7 +120,7 @@ FIM PROCEDIMENTO</code></pre>
                 </article>
             </section>
 
-            <section class="conteudo__info">
+            <section class="conteudo__info" id="conteudo__info">
                 <h2 class="conteudo__titulo">Horários e Contato</h2>
                 <div class="info__container">
                     <article class="conteudo__artigo">
