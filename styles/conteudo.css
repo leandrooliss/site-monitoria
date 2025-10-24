@@ -33,7 +33,7 @@ html {
 }
 
 /* SOBRE -------------------------------------------------------------------------------------------- */
-#conteudo__sobre {
+#conteudo-sobre {
     display: block;
 }
 
@@ -51,7 +51,7 @@ html {
 
 /* CONTEUDO ----------------------------------------------------------------------------------------- */
 
-#conteudo__algoritmos {
+#conteudo-algoritmos {
     display: none;
 }
 
@@ -70,7 +70,7 @@ html {
 
 /* LISTA DE EXERCICIOS ----------------------------------------------------------------------------- */
 
-#conteudo__exercicios {
+#conteudo-exercicios {
     display: none;
 }
 
@@ -112,7 +112,7 @@ html {
 
 /* HORARIO E CONTATO ------------------------------------------------------------------------------ */
 
-#conteudo__info {
+#conteudo-info {
     display: none;
 }
 
