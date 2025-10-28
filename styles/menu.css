@@ -22,6 +22,7 @@
     color: var(--cor-fonte);
     font-weight: 500;
     transition: background-color .15s ease-in-out;
+    position: relative;
 }
 
 .menu__item:not(:last-child){
@@ -31,3 +32,40 @@
 .menu__item:hover{
     background-color: var(--cor-hover);
 }
+
+.menu__sublista{
+    grid-column: 1 / -1;
+    padding: 0 2.2rem;
+    margin-bottom: 0.5rem;
+    display: none;
+}
+
+.sublista__item{
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.sublista__item:not(:last-child){
+    margin-bottom: 0.25rem;
+}
+
+.sublista__selecionado{
+    text-decoration: underline;
+}
+
+.item__ativo{
+    background-color: var(--cor-hover);
+}
+
+#seta-algoritmos {
+  transition: transform .1s ease-in-out;
+}
+
+#menu-algoritmos.item__ativo > #seta-algoritmos{
+    transform: rotate(90deg);   
+}
+
+#menu-algoritmos.item__ativo ~ .menu__sublista{
+    display: block;
+}
+
