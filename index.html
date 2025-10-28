@@ -12,7 +12,7 @@
     <header class="cabecalho">
         <figure>
             <img class="cabecalho__logo" src="img/logo.svg" alt="Logo do site da monitoria">
-        </figure> 
+        </figure>
         <div>
             <h1 class="cabecalho__titulo">Monitoria de Algoritmos</h1>
             <p class="cabecalho__texto">Fatec Rubens Lara - Análise e Desenvolvimento de Sistemas</p>
@@ -35,9 +35,9 @@
                         
                     </li>
                     <ul class="menu__sublista">
-                        <li>Estruturas de Controle</li>
-                        <li>Algoritmos de Ordenação</li>
-                        <li>Estrutura de Dados</li>
+                        <li class="sublista__item" id="menu-estruturas-controle">Estruturas de Controle</li>
+                        <li class="sublista__item" id="menu-ordenacao">Algoritmos de Ordenação</li>
+                        <li class="sublista__item" id="menu-estrutura-dados">Estrutura de Dados</li>
                     </ul>
                     <li class="menu__item" id="menu-exercicios">
                         <img src="img/exercicios.svg" alt="Ícone da lista de exercícios" />
@@ -77,7 +77,10 @@
 
             <section id="conteudo-algoritmos">
                 <h2 class="conteudo__titulo">Conteúdo da Disciplina</h2>
-                <article class="conteudo__artigo">
+                <article class="conteudo__artigo" id="conteudo-landing">
+                    <h3 class="conteudo__subtitulo">Placeholder</h3>
+                </article>
+                <article class="conteudo__artigo" id="conteudo-estruturas-controle">
                     <h3 class="conteudo__subtitulo">Estruturas de controle</h3>
                     <p>Aprenda sobre condicionais, loops e estruturas de decisão.</p>
 <pre class="conteudo__codigo">
@@ -88,7 +91,7 @@ SENÃO
     Escreva "Menor de idade"
 FIM SE</code></pre>
                 </article>
-                <article class="conteudo__artigo">
+                <article class="conteudo__artigo" id="conteudo-ordenacao">
                     <h3 class="conteudo__subtitulo">Algoritmos de Ordenação</h3>
                     <p>Bubble Sort, Selection Sort, Insertion Sort e algoritmos mais avançados.</p>
 <pre class="conteudo__codigo">
@@ -101,7 +104,7 @@ FIM SE</code></pre>
     FIM PARA
 FIM PARA</code></pre>
                 </article>
-                <article class="conteudo__artigo">
+                <article class="conteudo__artigo" id="conteudo-estrutura-dados">
                     <h3 class="conteudo__subtitulo">Estrutura de Dados</h3>
                     <p>Listas, pilhas, filas, árvores e grafos.</p>
 <pre class="conteudo__codigo">

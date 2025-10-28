@@ -5,6 +5,13 @@ const secoes = [
     document.getElementById('conteudo-exercicios'),
     document.getElementById('conteudo-info')
 ];
+const botoesSubMenu = document.querySelectorAll(".sublista__item");
+const artigos = [
+    document.getElementById('conteudo-landing'),
+    document.getElementById('conteudo-estruturas-controle'), 
+    document.getElementById('conteudo-ordenacao'),
+    document.getElementById('conteudo-estrutura-dados')
+]
 
 function VerificaDisplay() {
     let ativo;
@@ -15,10 +22,27 @@ function VerificaDisplay() {
     return ativo;
 }
 
+function VerificaDisplayConteudo() {
+    let ativo;
+    artigos.forEach(element => {
+        if (getComputedStyle(element).display === 'block')
+            ativo =  element;
+    });
+    return ativo;
+}
+
 function Mostra(sectionId) {
-    var ativo = VerificaDisplay();
+    let ativo = VerificaDisplay();
     if (document.getElementById(sectionId) != ativo){
         document.getElementById(sectionId).style.display = 'block';
+        ativo.style.display = 'none';
+    }
+}
+
+function MostraConteudo(articleId) {
+    let ativo = VerificaDisplayConteudo();
+    if (document.getElementById(articleId) != ativo){
+        document.getElementById(articleId).style.display = 'block';
         ativo.style.display = 'none';
     }
 }
@@ -34,3 +58,13 @@ botoesMenu.forEach(botao => {
     });
 });
 
+botoesSubMenu.forEach(botao => {
+    botao.addEventListener("click", function(){
+        botoesSubMenu.forEach(botao => {
+            botao.classList.remove("sublista__selecionado");
+        });
+        botao.classList.add("sublista__selecionado");
+        const idBotao = botao.id.replace("menu", "conteudo");
+        MostraConteudo(idBotao);   
+    });
+});

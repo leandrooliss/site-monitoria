@@ -37,30 +37,20 @@
     grid-column: 1 / -1;
     padding: 0 2.2rem;
     margin-bottom: 0.5rem;
-    /* max-height: 0;
-    overflow: hidden;
-    transition: all 1.5 ease; */
     display: none;
-    counter-reset: item; 
 }
 
-.menu__sublista li{
+.sublista__item{
     font-size: 0.9rem;
     cursor: pointer;
-    counter-increment: item;
-    position: relative;
 }
 
-.menu__sublista li::before {
-  content: counter(item) ". ";
-  position: absolute;
-  left: -1rem;
-  color: var(--cor-fonte-claro);
-  font-weight: 300;
-}
-
-.menu__sublista li:not(:last-child){
+.sublista__item:not(:last-child){
     margin-bottom: 0.25rem;
+}
+
+.sublista__selecionado{
+    text-decoration: underline;
 }
 
 .item__ativo{
@@ -77,7 +67,5 @@
 
 #menu-algoritmos.item__ativo ~ .menu__sublista{
     display: block;
-    /* max-height: 500px;
-    opacity: 1; */
 }
 
