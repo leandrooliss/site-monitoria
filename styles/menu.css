@@ -49,7 +49,11 @@
     margin-bottom: 0.25rem;
 }
 
-.sublista__selecionado{
+.sublista__item:hover{
+    text-decoration: underline;
+}
+
+.sublista__ativo{
     text-decoration: underline;
 }
 
@@ -61,11 +65,11 @@
   transition: transform .1s ease-in-out;
 }
 
-#menu-algoritmos.item__ativo > #seta-algoritmos{
+.seta__rodada{
     transform: rotate(90deg);   
 }
 
-#menu-algoritmos.item__ativo ~ .menu__sublista{
+.sublista__aparece{
     display: block;
 }
 
