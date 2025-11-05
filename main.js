@@ -1,84 +1,101 @@
-const botoesMenu = document.querySelectorAll('.menu__item, .sublista__item');
+const botoesMenu = document.querySelectorAll('.menu__item');
+const botoesSubMenu = document.querySelectorAll('.submenu__item');
+
+const botaoAlgoritmos = document.getElementById('menu-algoritmos')
+const setaSubMenu = document.getElementById('seta-algoritmos');
+const subMenu = document.getElementById('submenu');
+
 const secoes = [
     document.getElementById('conteudo-sobre'), 
     document.getElementById('conteudo-algoritmos'),
     document.getElementById('conteudo-exercicios'),
-    document.getElementById('conteudo-info'),
+    document.getElementById('conteudo-info')
+];
+
+const artigos = [
     document.getElementById('conteudo-placeholder'),
     document.getElementById('conteudo-estruturas-controle'), 
     document.getElementById('conteudo-ordenacao'),
     document.getElementById('conteudo-estrutura-dados')
 ];
 
-const setaAlgoritmos = document.getElementById('seta-algoritmos');
-const sublista = document.getElementById('menu-sublista');
-
-document.getElementById('menu-sobre').classList.add('item__ativo');
 let secaoAtiva = document.getElementById('conteudo-sobre');
 secaoAtiva.style.display = 'block';
+let artigoAtivo = document.getElementById('conteudo-placeholder');
+artigoAtivo.style.display = 'block';
 
-function toggleSubmenu(){
-    sublista.classList.toggle('sublista__aparece');
-    setaAlgoritmos.classList.toggle('seta__rodada');
+document.getElementById('menu-sobre').classList.add('item__ativo');
+
+function toggleSubMenu(){
+    setaSubMenu.classList.toggle('seta__rodada');
+    subMenu.classList.toggle('submenu__aparece');
 }
 
-function abreSubmenu(){
-    sublista.classList.add('sublista__aparece');
-    setaAlgoritmos.classList.add('seta__rodada');
+function abreSubMenu(){
+    setaSubMenu.classList.add('seta__rodada');
+    subMenu.classList.add('submenu__aparece');
 }
 
-function fechaSubmenu(){
-    sublista.classList.remove('sublista__aparece');
-    setaAlgoritmos.classList.remove('seta__rodada'); 
+function fechaSubMenu(){
+    setaSubMenu.classList.remove('seta__rodada');
+    subMenu.classList.remove('submenu__aparece');
 }
 
-function Mostra(sectionId) {
-    const secaoConteudo = document.getElementById('conteudo-algoritmos');
-    const secaoPlaceholder = document.getElementById('conteudo-placeholder');
-    const secaoClicada = document.getElementById(sectionId);
-
-    if (secaoClicada !== secaoAtiva){
-        if(secaoAtiva.tagName === 'ARTICLE'){
-            secaoConteudo.style.display = 'none';
-        }
+function MostraSecao(sectionId) {
+    const novaSecao = document.getElementById(sectionId);
+    if (novaSecao !== secaoAtiva){
         secaoAtiva.style.display = 'none';
-
-        if(secaoClicada.tagName === 'ARTICLE'){
-            secaoConteudo.style.display = 'block';
-            secaoPlaceholder.style.display = 'none';
-            abreSubmenu();
-        }else if(secaoClicada.id === 'conteudo-algoritmos'){
-            secaoPlaceholder.style.display = 'block';
-            abreSubmenu();
-        }
-        else{
-            fechaSubmenu();
-        } 
-        secaoClicada.style.display = 'block';
-        secaoAtiva = secaoClicada;
+        novaSecao.style.display = 'block';
+        secaoAtiva = novaSecao;
     }
 }
 
-setaAlgoritmos.addEventListener('click', function(event){
+function MostraArtigo(articleId) {
+    const novoArtigo = document.getElementById(articleId);
+    if (novoArtigo !== artigoAtivo){
+        artigoAtivo.style.display = 'none';
+        novoArtigo.style.display = 'block';
+        artigoAtivo = novoArtigo
+    }
+}
+
+setaSubMenu.addEventListener('click', function(event){
     event.stopPropagation();
-    toggleSubmenu();
+    toggleSubMenu();
 });
 
 botoesMenu.forEach(botao => {
     botao.addEventListener('click', function(){
         botoesMenu.forEach(botao => {
             botao.classList.remove('item__ativo');
-            botao.classList.remove('sublista__ativo');
         });
-        if(botao.classList.contains('menu__item')){
-            botao.classList.add('item__ativo');
-        }else{
-            const menuConteudo = document.getElementById('menu-algoritmos');
-            menuConteudo.classList.add('item__ativo');
-            botao.classList.add('sublista__ativo');
-        }
+        botoesSubMenu.forEach(botao => {
+            botao.classList.remove('submenu__ativo');
+        });
+        botao.classList.add('item__ativo');
         const idBotao = botao.id.replace('menu', 'conteudo');
-        Mostra(idBotao);   
+        MostraSecao(idBotao);
+        if(idBotao === 'conteudo-algoritmos'){
+            MostraArtigo('conteudo-placeholder');
+            abreSubMenu();
+        }else{
+            fechaSubMenu();
+        } 
     });
 });
 
+botoesSubMenu.forEach(botao => {
+    botao.addEventListener('click', function(){
+        botoesMenu.forEach(botao => {
+            botao.classList.remove('item__ativo');
+        });
+        botaoAlgoritmos.classList.add('item__ativo');
+        botoesSubMenu.forEach(botao => {
+            botao.classList.remove('submenu__ativo');
+        });
+        botao.classList.add('submenu__ativo');
+        const idBotao = botao.id.replace('menu', 'conteudo');
+        MostraArtigo(idBotao);
+        MostraSecao('conteudo-algoritmos');   
+    });
+});

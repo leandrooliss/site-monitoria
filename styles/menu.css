@@ -33,43 +33,43 @@
     background-color: var(--cor-hover);
 }
 
-.menu__sublista{
+.item__ativo{
+    background-color: var(--cor-hover);
+}
+
+.menu__submenu{
     grid-column: 1 / -1;
     padding: 0 2.2rem;
     margin-bottom: 0.5rem;
     display: none;
 }
 
-.sublista__item{
+.submenu__item{
     font-size: 0.9rem;
     cursor: pointer;
 }
 
-.sublista__item:not(:last-child){
+.submenu__item:not(:last-child){
     margin-bottom: 0.25rem;
 }
 
-.sublista__item:hover{
+.submenu__item:hover{
     text-decoration: underline;
 }
 
-.sublista__ativo{
+.submenu__ativo{
     text-decoration: underline;
-}
-
-.item__ativo{
-    background-color: var(--cor-hover);
 }
 
 #seta-algoritmos {
   transition: transform .1s ease-in-out;
 }
-
+ 
 .seta__rodada{
     transform: rotate(90deg);   
 }
 
-.sublista__aparece{
+.submenu__aparece{
     display: block;
 }
 
