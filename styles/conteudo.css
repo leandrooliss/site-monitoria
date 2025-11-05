@@ -1,7 +1,3 @@
-#conteudo-estruturas-controle, #conteudo-ordenacao, #conteudo-estrutura-dados{
-    display: none;
-}
-
 /* GERAL --------------------------------------------------------------------------------------- */
 
 html {
@@ -38,7 +34,7 @@ html {
 
 /* SOBRE -------------------------------------------------------------------------------------------- */
 #conteudo-sobre {
-    display: block;
+    display: none;
 }
 
 .sobre__lista {
@@ -56,6 +52,10 @@ html {
 /* CONTEUDO ----------------------------------------------------------------------------------------- */
 
 #conteudo-algoritmos {
+    display: none;
+}
+
+#conteudo-estruturas-controle, #conteudo-ordenacao, #conteudo-estrutura-dados{
     display: none;
 }
 
