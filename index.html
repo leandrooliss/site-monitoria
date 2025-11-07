@@ -28,16 +28,16 @@
                         Sobre a Monitoria
                         <img src="img/seta.svg" alt="Ícone de uma seta apontada para direita" />
                     </li>
-                    <li class="menu__item" id="menu-algoritmos">
+                    <li class="menu__item" id="menu-disciplina">
                         <img src="img/conteudo.svg" alt="Ícone do conteúdo da disciplina" />
                         Conteúdo da Disciplina
                         <img src="img/seta.svg" alt="Ícone de uma seta apontada para direita" id="seta-algoritmos" />
                         
                     </li>
                     <ul class="menu__submenu" id="submenu">
-                        <li class="submenu__item" id="menu-estruturas-controle">Estruturas de Controle</li>
-                        <li class="submenu__item" id="menu-ordenacao">Algoritmos de Ordenação</li>
-                        <li class="submenu__item" id="menu-estrutura-dados">Estrutura de Dados</li>
+                        <li class="submenu__item" id="menu-algoritmos">Algoritmos</li>
+                        <li class="submenu__item" id="menu-logica">Lógica de Programação</li>
+                        <li class="submenu__item" id="menu-estrutura-controle">Estrutura de Controle</li>
                     </ul>
                     <li class="menu__item" id="menu-exercicios">
                         <img src="img/exercicios.svg" alt="Ícone da lista de exercícios" />
@@ -57,7 +57,16 @@
             <section class="conteudo__sobre" id="conteudo-sobre">
                 <h2 class="conteudo__titulo">Sobre a Monitoria</h2>
                 <article class="conteudo__artigo">
-                    <p>Bem-vindos à monitoria de algoritmo! Este espaço foi criado para auxiliar os estudantes no aprendizado dos conceitos fundamentais de programação e estruturas de dados.</p>
+                    <p>
+                        A monitoria de Algoritmos e Lógica de Programação foi criada para apoiar os alunos da FATEC Rubens Lara no entendimento dos conceitos fundamentais da programação. Este espaço reúne materiais didáticos, exemplos práticos, listas de exercícios e links úteis para facilitar o aprendizado e a prática dos conteúdos abordados em sala de aula.
+                    </p>
+                    <p>
+                        Aqui você encontrará explicações sobre algoritmos, lógica de programação, estruturas de controle, ordenação, estruturas de dados e muito mais. O objetivo é tornar o estudo mais acessível, interativo e colaborativo, com suporte da monitoria e colegas.
+                    </p>
+                    <p>
+                        Seja bem-vindo! Explore os conteúdos, participe dos grupos e aproveite os recursos disponíveis para evoluir na sua jornada como programador.
+                    </p>
+
                     <ul class="sobre__lista">
                         <li>
                             <img src="img/suporte.svg" alt="Ícone de um usuário"/>
@@ -75,48 +84,101 @@
                 </article>
             </section>
 
-            <section id="conteudo-algoritmos">
+            <section id="conteudo-disciplina">
                 <h2 class="conteudo__titulo">Conteúdo da Disciplina</h2>
-                <article class="conteudo__artigo" id="conteudo-placeholder">
-                    <h3 class="conteudo__subtitulo">Placeholder</h3>
+                <article class="conteudo__artigo" id="conteudo-visaogeral">
+                    <h3 class="conteudo__subtitulo">Visão Geral</h3>
+                    <p>Esta disciplina introduz os conceitos fundamentais de algoritmos e lógica de programação, preparando os alunos para desenvolver soluções computacionais estruturadas. Os principais tópicos abordados incluem:</p>
+                    <br>
+                    <ul>
+                        <li><strong>Algoritmos:</strong> Definição, características, exemplos práticos e formas de representação como fluxogramas, pseudocódigo e descrição narrativa.</li>
+                        <li><strong>Lógica de Programação:</strong> Conceitos de sequência lógica, operadores, atribuição e estruturação de pensamento para resolução de problemas.</li>
+                        <li><strong>Estruturas de Controle:</strong> Introdução às instruções condicionais (<em>SE</em>, <em>SENÃO</em>) e de repetição (<em>ENQUANTO</em>, <em>PARA</em>), que permitem controlar o fluxo dos programas.</li>
+                    </ul>
+                    <br>
+                    <p>Use o menu lateral para acessar os conteúdos detalhados de cada tópico, com explicações, exemplos e exercícios.</p>
                 </article>
-                <article class="conteudo__artigo" id="conteudo-estruturas-controle">
-                    <h3 class="conteudo__subtitulo">Estruturas de controle</h3>
-                    <p>Aprenda sobre condicionais, loops e estruturas de decisão.</p>
-<pre class="conteudo__codigo">
-<span>Exemplo - Estrutura Condicional</span>
-<code>SE (idade &ge; 18) ENTÃO
-    ESCREVA "Maior de idade"
-SENÃO
-    Escreva "Menor de idade"
-FIM SE</code></pre>
+                <article class="conteudo__artigo" id="conteudo-algoritmos">
+                    <h3 class="conteudo__subtitulo">Algoritmos</h3>
+                    <p>Um <strong>algoritmo</strong> é uma sequência finita de passos bem definidos que descrevem como resolver um problema ou realizar uma tarefa. Ele funciona como uma receita: se seguido corretamente, leva a um resultado esperado.</p>
+                    <br>
+                    <h4>Características de um bom algoritmo:</h4>
+                    <br>
+                    <ul>
+                        <li><strong>Precisão:</strong> cada instrução deve ser clara e objetiva.</li>
+                        <li><strong>Não ambiguidade:</strong> os passos não podem gerar interpretações diferentes.</li>
+                        <li><strong>Finitude:</strong> deve terminar após um número limitado de etapas.</li>
+                        <li><strong>Eficiência:</strong> deve usar bem os recursos disponíveis (tempo, memória).</li>
+                        <li><strong>Generalidade:</strong> deve resolver um problema genérico, não apenas um caso específico.</li>
+                    </ul>
+                    <br>
+                    <h4>Exemplos de algoritmos:</h4>
+                    <br>
+                    <ul>
+                        <li><strong>Receita de bolo:</strong> lista de ingredientes e passos para preparar.</li>
+                        <li><strong>Instruções para montar um móvel:</strong> sequência de ações para chegar ao resultado final.</li>
+                        <li><strong>Fluxo de login em um sistema:</strong> verificar usuário, senha e liberar acesso.</li>
+                    </ul>
+                    <br>
+                    <h4>Formas de representar algoritmos:</h4>
+                    <br>
+                    <ul>
+                        <li><strong>Descrição narrativa:</strong> escrita em linguagem natural.</li>
+                        <li><strong>Fluxograma:</strong> uso de símbolos gráficos para representar o fluxo lógico.</li>
+                        <li><strong>Pseudocódigo:</strong> escrita estruturada com comandos semelhantes aos de programação.</li>
+                    </ul>
+                    <br>
+                    <p>Os algoritmos são a base da programação. Antes de escrever um código, é essencial entender e planejar o algoritmo que resolverá o problema.</p>
                 </article>
-                <article class="conteudo__artigo" id="conteudo-ordenacao">
-                    <h3 class="conteudo__subtitulo">Algoritmos de Ordenação</h3>
-                    <p>Bubble Sort, Selection Sort, Insertion Sort e algoritmos mais avançados.</p>
-<pre class="conteudo__codigo">
-<span>Exemplo - Bubble Sort:</span>
-<code>PARA i = 0 ATÉ n-1 FAÇA
-    PARA j = 0 ATÉ n-i-2 FAÇA
-        SE vetor[j] > vetor[j+1] ENTÃO
-            trocar(vetor[j], vetor[j+1])
-        FIM SE
-    FIM PARA
-FIM PARA</code></pre>
+                <article class="conteudo__artigo" id="conteudo-logica">
+                    <h3 class="conteudo__subtitulo">Lógica de Programação</h3>
+                    <p>A lógica de programação é a base para construir algoritmos e desenvolver programas. Ela envolve o raciocínio necessário para organizar instruções de forma que resolvam um problema de maneira eficiente e estruturada.</p>
+                    <br>
+                    <h4>Conceitos fundamentais:</h4>
+                    <br>
+                    <ul>
+                        <li><strong>Sequência lógica:</strong> conjunto ordenado de passos que levam à solução de um problema.</li>
+                        <li><strong>Linguagem de programação:</strong> conjunto de regras sintáticas e semânticas usadas para escrever programas que o computador possa interpretar.</li>
+                        <li><strong>Operadores:</strong> símbolos que realizam operações matemáticas, relacionais ou lógicas (ex.: <code>+</code>, <code>&gt;</code>, <code>E</code>, <code>OU</code>).</li>
+                        <li><strong>Atribuição:</strong> ação de armazenar um valor em uma variável (ex.: <code>a = 100</code>).</li>
+                    </ul>
+                    <br>
+                    <h4>Etapas para desenvolver um programa:</h4>
+                    <br>
+                    <ol>
+                        <li><strong>Análise:</strong> entender o problema e identificar os dados de entrada, processamento e saída.</li>
+                        <li><strong>Algoritmo:</strong> descrever a solução usando narrativa, fluxograma ou pseudocódigo.</li>
+                        <li><strong>Codificação:</strong> transformar o algoritmo em código usando uma linguagem de programação.</li>
+                    </ol>
+                    <br>
+                    <p>Aprender lógica de programação é essencial para dominar qualquer linguagem. É como aprender a pensar como um computador: de forma clara, precisa e estruturada.</p>
                 </article>
-                <article class="conteudo__artigo" id="conteudo-estrutura-dados">
-                    <h3 class="conteudo__subtitulo">Estrutura de Dados</h3>
-                    <p>Listas, pilhas, filas, árvores e grafos.</p>
-<pre class="conteudo__codigo">
-<span>Exemplo - Pilha (Push):</span>
-<code>PROCEDIMENTO empilhar(elemento)
-    SE topo < TAMANHO_MAX ENTÃO
-        topo = topo + 1
-        pilha[topo] = elemento
-    SENÃO
-        ESCREVA "Pilha cheia"
-    FIM SE
-FIM PROCEDIMENTO</code></pre>
+                <article class="conteudo__artigo" id="conteudo-estrutura-controle">
+                    <h3 class="conteudo__subtitulo">Estrutura de Controle</h3>
+                    <p>As estruturas de controle são responsáveis por definir o caminho que o programa deve seguir durante sua execução. Elas permitem tomar decisões e repetir ações com base em condições específicas.</p>
+                    <br>
+                    <h4>Tipos principais:</h4>
+                    <br>
+                    <ul>
+                        <li><strong>Seleção (Condicional):</strong> executa diferentes blocos de código dependendo de uma condição. Exemplo: <code>SE...SENÃO</code>.</li>
+                        <li><strong>Repetição (Laços):</strong> executa um bloco de código várias vezes enquanto uma condição for verdadeira. Exemplos: <code>ENQUANTO</code>, <code>PARA</code>.</li>
+                    </ul>
+                    <br>
+                    <h4>Exemplo de estrutura condicional:</h4>
+            <pre class="conteudo__codigo">
+            <span>Verificação de idade:</span>
+            <code>SE (idade &ge; 18) ENTÃO
+                ESCREVA "Maior de idade"
+            SENÃO
+                ESCREVA "Menor de idade"
+            FIM SE</code></pre>
+                    <h4>Exemplo de estrutura de repetição:</h4>
+            <pre class="conteudo__codigo">
+            <span>Contagem de 1 a 5:</span>
+            <code>PARA i = 1 ATÉ 5 FAÇA
+                ESCREVA i
+            FIM PARA</code></pre>
+                    <p>Essas estruturas são fundamentais para criar programas dinâmicos e inteligentes, que se adaptam a diferentes situações e dados de entrada.
                 </article>
             </section>
 
@@ -144,7 +206,7 @@ FIM PROCEDIMENTO</code></pre>
                         <span class="info__destaque">Local:</span>
                         <p class="info__fatec">Fatec Rubens Lara</p>
                         <span class="info__destaque">WhatsApp:</span>
-                        <p>Grupo da Monitoria <a href="https://chat.whatsapp.com/IfuIjxE26Rt1VTRswg20g7?mode=wwt" target="_blank" id="link"><span id="link__grupo">[clique aqui]</span></a></p>
+                        <p>Grupo da Monitoria <a href="https://chat.whatsapp.com/IfuIjxE26Rt1VTRswg20g7?mode=wwt" target="_blank" class="link"><span id="link__grupo">[clique aqui]</span></a></p>
                     </article>
                 </div>
             </section>
@@ -155,19 +217,19 @@ FIM PROCEDIMENTO</code></pre>
         <ul class="rodape__lista">
             <h3 class="rodape__titulo">Links Úteis</h3>
             <li class="rodape__item">
-                <a href="https://siga.cps.sp.gov.br/sigaaluno/applogin.aspx" target="_blank" id="link">SIGA</a>
+                <a href="https://siga.cps.sp.gov.br/sigaaluno/applogin.aspx" target="_blank" class="link">SIGA</a>
             </li>
             <li class="rodape__item">
-                <a href="https://fatecrl.edu.br/cms/uploads/cronograma/cronograma-semestral.pdf" target="_blank" id="link">Calendário Acadêmico</a>
+                <a href="https://fatecrl.edu.br/cms/uploads/cronograma/cronograma-semestral.pdf" target="_blank" class="link">Calendário Acadêmico</a>
             </li>
             <li class="rodape__item">
-                <a href="https://drive.google.com/file/d/11uBLNcAYKo31E2yGQ_PfeCZvIdNVtSsz/view?usp=drive_link" target="_blank" id="link">Code Blocks</a>
+                <a href="https://drive.google.com/file/d/11uBLNcAYKo31E2yGQ_PfeCZvIdNVtSsz/view?usp=drive_link" target="_blank" class="link">Code Blocks</a>
             </li>
         </ul>
         <ul class="rodape__lista">
             <h3 class="rodape__titulo">Recursos</h3>
             <li class="rodape__item">
-                <a href="https://drive.google.com/drive/folders/1ZOC2KetLu4_BWc496z7RveVO1Gxv4e-5?usp=drive_link" target="_blank" id="link">Material de Apoio</a>
+                <a href="https://drive.google.com/drive/folders/1ZOC2KetLu4_BWc496z7RveVO1Gxv4e-5?usp=drive_link" target="_blank" class="link">Material de Apoio</a>
             </li>
             <li class="rodape__item">
                 Exercícios Extras (em andamento)
@@ -176,13 +238,13 @@ FIM PROCEDIMENTO</code></pre>
         <ul class="rodape__lista">
             <h3 class="rodape__titulo">Redes Sociais</h3>
             <li class="rodape__item">
-                <a href="https://github.com/leandrooliss/site-monitoria" target="_blank" id="link">Github</a>
+                <a href="https://github.com/leandrooliss/site-monitoria" target="_blank" class="link">Github</a>
             </li>
             <li class="rodape__item">
                 <ul class="rodape__lista">
                     <li class="rodape__item">Linkedin:</li>
-                    <li class="rodape__item">- Monitora: <a href="https://www.linkedin.com/in/amanda-yida-a035432b5/" target="_blank" id="link">Amanda</a></li>
-                    <li class="rodape__item">- Desenvolvedores: <a href="https://www.linkedin.com/in/cesaralnunes/" target="_blank" id="link">César</a> - <a href="https://www.linkedin.com/in/leandro-oliss/" target="_blank" id="link">Leandro</a></pre></li>
+                    <li class="rodape__item">- Monitora: <a href="https://www.linkedin.com/in/amanda-yida-a035432b5/" target="_blank" class="link">Amanda</a></li>
+                    <li class="rodape__item">- Desenvolvedores: <a href="https://www.linkedin.com/in/cesaralnunes/" target="_blank" class="link">César</a> - <a href="https://www.linkedin.com/in/leandro-oliss/" target="_blank" class="link">Leandro</a></pre></li>
                 </ul>
             </li>
         </ul>
