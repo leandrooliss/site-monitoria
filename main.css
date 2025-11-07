@@ -35,10 +35,10 @@ main {
     min-height: calc(100vh - 5.3rem);
 }
 
-#link {
+.link {
     text-decoration: none;
 }
 
-#link:hover {
+.link:hover {
     text-decoration: underline;
 }
