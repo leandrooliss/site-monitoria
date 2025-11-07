@@ -1,27 +1,27 @@
 const botoesMenu = document.querySelectorAll('.menu__item');
 const botoesSubMenu = document.querySelectorAll('.submenu__item');
 
-const botaoAlgoritmos = document.getElementById('menu-algoritmos')
+const botaoAlgoritmos = document.getElementById('menu-disciplina')
 const setaSubMenu = document.getElementById('seta-algoritmos');
 const subMenu = document.getElementById('submenu');
 
 const secoes = [
     document.getElementById('conteudo-sobre'), 
-    document.getElementById('conteudo-algoritmos'),
+    document.getElementById('conteudo-disciplina'),
     document.getElementById('conteudo-exercicios'),
     document.getElementById('conteudo-info')
 ];
 
 const artigos = [
-    document.getElementById('conteudo-placeholder'),
-    document.getElementById('conteudo-estruturas-controle'), 
-    document.getElementById('conteudo-ordenacao'),
-    document.getElementById('conteudo-estrutura-dados')
+    document.getElementById('conteudo-visaogeral'),
+    document.getElementById('conteudo-algoritmos'), 
+    document.getElementById('conteudo-logica'),
+    document.getElementById('conteudo-estrutura-controle')
 ];
 
 let secaoAtiva = document.getElementById('conteudo-sobre');
 secaoAtiva.style.display = 'block';
-let artigoAtivo = document.getElementById('conteudo-placeholder');
+let artigoAtivo = document.getElementById('conteudo-visaogeral');
 artigoAtivo.style.display = 'block';
 
 document.getElementById('menu-sobre').classList.add('item__ativo');
@@ -47,6 +47,7 @@ function MostraSecao(sectionId) {
         secaoAtiva.style.display = 'none';
         novaSecao.style.display = 'block';
         secaoAtiva = novaSecao;
+        scrollTo(0,0);
     }
 }
 
@@ -56,6 +57,7 @@ function MostraArtigo(articleId) {
         artigoAtivo.style.display = 'none';
         novoArtigo.style.display = 'block';
         artigoAtivo = novoArtigo
+        scrollTo(0,0);
     }
 }
 
@@ -75,8 +77,8 @@ botoesMenu.forEach(botao => {
         botao.classList.add('item__ativo');
         const idBotao = botao.id.replace('menu', 'conteudo');
         MostraSecao(idBotao);
-        if(idBotao === 'conteudo-algoritmos'){
-            MostraArtigo('conteudo-placeholder');
+        if(idBotao === 'conteudo-disciplina'){
+            MostraArtigo('conteudo-visaogeral');
             abreSubMenu();
         }else{
             fechaSubMenu();
@@ -96,6 +98,6 @@ botoesSubMenu.forEach(botao => {
         botao.classList.add('submenu__ativo');
         const idBotao = botao.id.replace('menu', 'conteudo');
         MostraArtigo(idBotao);
-        MostraSecao('conteudo-algoritmos');   
+        MostraSecao('conteudo-disciplina');   
     });
 });

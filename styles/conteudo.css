@@ -51,11 +51,11 @@ html {
 
 /* CONTEUDO ----------------------------------------------------------------------------------------- */
 
-#conteudo-algoritmos {
+#conteudo-disciplina {
     display: none;
 }
 
-#conteudo-estruturas-controle, #conteudo-ordenacao, #conteudo-estrutura-dados{
+#conteudo-algoritmos, #conteudo-logica, #conteudo-estrutura-controle{
     display: none;
 }
 
