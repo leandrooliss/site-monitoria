@@ -75,18 +75,23 @@
     transition: background 0.25s ease;
 }
 
+/* Quando passa o mouse, a barrinha aparece */
 .submenu__item:hover::before{
     background-color: var(--cor-hover);
 }
 
+
+/* Quando o item está ativo, a barrinha fica permanente */
 .submenu__ativo::before {
     background-color: var(--cor-hover);
 }
 
+/* Cor de destaque no texto ao passar o mouse ou quando ativo */
 .submenu__item:hover, .submenu__ativo{
     color: var(--cor-fonte);
 }
 
+/* SETA DO SUBMENU ----------------------------------------------------------------- */
 
 #seta-algoritmos {
   transition: transform .1s ease-in-out;

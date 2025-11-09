@@ -59,6 +59,10 @@ html {
     display: none;
 }
 
+.conteudo__artigo h2{
+    color: var(--cor-fonte);
+}
+
 .conteudo__codigo {
     padding: 1rem;
     font-size: 0.9rem;
