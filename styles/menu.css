@@ -1,3 +1,4 @@
+/* MENU PRINCIPAL -------------------------------------------------------------------------*/
 .container__menu{
     background-color: var(--cor-fundo-div);
     border-right: 1px solid lightgrey;
@@ -37,29 +38,55 @@
     background-color: var(--cor-hover);
 }
 
+/* SUBMENU ---------------------------------------------------------------------------*/
+
 .menu__submenu{
     grid-column: 1 / -1;
     padding: 0 2.2rem;
     margin-bottom: 0.5rem;
-    display: none;
+    display: none; /* Começa escondido, é mostrado com JS */
 }
 
+/* Itens individuais do submenu (carregados automaticamente do JSON) */
 .submenu__item{
-    font-size: 0.9rem;
     cursor: pointer;
+    position: relative;
+    padding-left: 0.6rem; /* Espaço pra barrinha lateral */
+    transition: color 0.2 ease;
+    white-space: normal; /* permite quebra de linha */
+    word-wrap: break-word; /* Garante quebra mesmo em palavras longas */
+    line-height: 1.4; /* Dá um pouco mais de espaçamento entre as linhas */
+    max-width: 150px; /* Mantém o submenu dentro de um limite fixo */
 }
 
 .submenu__item:not(:last-child){
     margin-bottom: 0.25rem;
 }
 
-.submenu__item:hover{
-    text-decoration: underline;
+/* Barrinha lateral dinâmica (ativa e hover) */
+.submenu__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0; /* Faz a barrinha cobrir a altura total, mesmo com 2+ linhas */
+    width: 3px;
+    background: transparent;
+    transition: background 0.25s ease;
 }
 
-.submenu__ativo{
-    text-decoration: underline;
+.submenu__item:hover::before{
+    background-color: var(--cor-hover);
 }
+
+.submenu__ativo::before {
+    background-color: var(--cor-hover);
+}
+
+.submenu__item:hover, .submenu__ativo{
+    color: var(--cor-fonte);
+}
+
 
 #seta-algoritmos {
   transition: transform .1s ease-in-out;
