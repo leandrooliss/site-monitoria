@@ -13,6 +13,8 @@ O objetivo é fornecer aos estudantes um espaço organizado com informações so
 - [Uso](#uso)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Arquitetura de Conteúdo](#arquitetura)
+- [Próximos Passos](#roadmap)
 - [Contribuição](#contribuicao)
 - [Licença](#licenca)
 
@@ -93,10 +95,32 @@ Navegue pelo menu lateral para acessar:
 
 ## 🛠️ Tecnologias Utilizadas <a id="tecnologias-utilizadas"></a>
 
-- **HTML5** → Estrutura do site  
-- **CSS3 (Flexbox e Grid)** → Estilização e layout  
-- **Google Fonts (Geist, Geist Mono)**  
-- **JavaScript (main.js)** → *espaço para futuras interações*  
+- **HTML5** → Estrutura semântica e esqueleto do site.
+- **CSS3 (Flexbox e Grid)** → Estilização completa, modularização do design (via `styles/`) e implementação de layout responsivo.
+- **JavaScript (ES6)** → Lógica de roteamento dinâmico do menu, gerenciamento de estado do layout (mostra/esconde seções) e carregamento assíncrono do conteúdo.
+- **marked.js** → Biblioteca utilizada para interpretar e renderizar o conteúdo dos arquivos Markdown (`.md`) em HTML diretamente no frontend.
+- **JSON (`conteudos.json`)** → Utilizado como fonte de dados para estruturar o menu e mapear os arquivos de conteúdo de forma organizada.
+- **Google Fonts (Geist, Geist Mono)** → Tipografia.
+
+---
+
+## 💡 Arquitetura de Conteúdo <a id="arquitetura"></a>
+
+O projeto foi concebido como um **Site Estático de Alto Desempenho (SPA-like)**, priorizando a facilidade de manutenção e a escalabilidade do material didático:
+
+* **Carregamento Dinâmico (JS Puro):** O arquivo `main.js` orquestra o carregamento de dados do `conteudos.json`. Ele simula a navegação de uma Single Page Application (SPA), buscando e renderizando o conteúdo de cada tópico (arquivos **Markdown** na pasta `conteudo/`) em tempo real. Utilizamos o `marked.js` para essa conversão.
+* **Modularização de CSS:** A estilização segue uma abordagem modular, utilizando arquivos dedicados por componente (`cabecalho.css`, `menu.css`, etc.) importados via `@import` no `main.css`. Essa estrutura, junto com o uso de **CSS Grid** e **Flexbox** (vistos nos arquivos `menu.css` e `footer.css`), facilita a organização, a manutenção e a adaptação futura do layout.
+* **Assets Leves:** A pasta `img/` contém 16 ícones em formato SVG, priorizando a performance e o carregamento rápido da interface.
+
+---
+
+## 🗺️ Próximos Passos (Roadmap) <a id="roadmap"></a>
+
+O projeto possui um planejamento de melhorias contínuas focado em performance, organização de código e experiência do usuário:
+
+1.  **Refatoração do JavaScript:** Organizar o `main.js` em módulos mais concisos, movendo-os para a pasta `scripts/` para melhor separação de responsabilidades.
+2.  **Responsividade Total:** Finalizar o ajuste do layout para garantir a melhor experiência em mobile.
+3.  **Experiência do Usuário (UX):** Implementação do **Modo Escuro** e adição de **Animações de Transição** para uma navegação mais fluída.
 
 ---
 
