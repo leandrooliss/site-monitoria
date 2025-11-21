@@ -34,7 +34,7 @@ O conteúdo é dividido em seções, incluindo:
 
 ## 🌐 Demonstração <a id="demonstracao"></a>
 
-📷 ![Demonstração do site](./img/print-site.png)
+📷 ![Demonstração do site](./img/gif-site.gif)
 🔗 [Link do Deploy](https://monitoriadealgoritmos.vercel.app/)
 
 ---
