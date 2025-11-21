@@ -121,6 +121,7 @@ O projeto possui um planejamento de melhorias contínuas focado em performance, 
 1.  **Refatoração do JavaScript:** Organizar o `main.js` em módulos mais concisos, movendo-os para a pasta `scripts/` para melhor separação de responsabilidades.
 2.  **Responsividade Total:** Finalizar o ajuste do layout para garantir a melhor experiência em mobile.
 3.  **Experiência do Usuário (UX):** Implementação do **Modo Escuro** e adição de **Animações de Transição** para uma navegação mais fluída.
+4.  **Adição de mais conteúdo didático:** Adicionar mais conteúdo baseado nas aulas do curso, além de conteúdo extra sobre o assunto.
 
 ---
 
