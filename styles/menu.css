@@ -1,3 +1,5 @@
+/* MENU PRINCIPAL -------------------------------------------------------------------------*/
+
 .container__menu{
     background-color: var(--cor-fundo-div);
     border-right: 1px solid lightgrey;
@@ -37,29 +39,57 @@
     background-color: var(--cor-hover);
 }
 
+/* SUBMENU ---------------------------------------------------------------------------*/
+
 .menu__submenu{
     grid-column: 1 / -1;
-    padding: 0 2.2rem;
+    padding: 0 1.5rem 0 3rem;
     margin-bottom: 0.5rem;
     display: none;
 }
 
+/* Itens do Submenu */
+
 .submenu__item{
     font-size: 0.9rem;
     cursor: pointer;
+    position: relative;
+    line-height: 1.3;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 150px;
 }
 
 .submenu__item:not(:last-child){
     margin-bottom: 0.25rem;
 }
 
-.submenu__item:hover{
-    text-decoration: underline;
+/* Barrinha lateral dinâmica (ativa e hover) */
+
+.submenu__item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    width: 3px;
+    background-color: none;
+    transition: background-color .25s ease;
 }
 
-.submenu__ativo{
-    text-decoration: underline;
+.submenu__item:hover::before{
+    background-color: var(--cor-hover);
 }
+
+.submenu__ativo::before{
+    background-color: var(--cor-hover);
+}
+
+.submenu__item:hover, .submenu__ativo{
+    color: var(--cor-fonte);
+}
+
+/* SETA DO SUBMENU ----------------------------------------------------------------- */
 
 #seta-algoritmos {
   transition: transform .1s ease-in-out;

@@ -55,10 +55,6 @@ html {
     display: none;
 }
 
-#conteudo-algoritmos, #conteudo-logica, #conteudo-estrutura-controle{
-    display: none;
-}
-
 .conteudo__codigo {
     padding: 1rem;
     font-size: 0.9rem;

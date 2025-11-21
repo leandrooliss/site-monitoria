@@ -1,34 +1,13 @@
-const botoesMenu = document.querySelectorAll('.menu__item');
-const botoesSubMenu = document.querySelectorAll('.submenu__item');
-
-const botaoAlgoritmos = document.getElementById('menu-disciplina')
-const setaSubMenu = document.getElementById('seta-algoritmos');
 const subMenu = document.getElementById('submenu');
+const secaoDisciplina = document.getElementById("conteudo-disciplina");
+const setaSubMenu = document.getElementById('seta-algoritmos');
 
-const secoes = [
-    document.getElementById('conteudo-sobre'), 
-    document.getElementById('conteudo-disciplina'),
-    document.getElementById('conteudo-exercicios'),
-    document.getElementById('conteudo-info')
-];
-
-const artigos = [
-    document.getElementById('conteudo-visaogeral'),
-    document.getElementById('conteudo-algoritmos'), 
-    document.getElementById('conteudo-logica'),
-    document.getElementById('conteudo-estrutura-controle')
-];
-
-let secaoAtiva = document.getElementById('conteudo-sobre');
-secaoAtiva.style.display = 'block';
-let artigoAtivo = document.getElementById('conteudo-visaogeral');
-artigoAtivo.style.display = 'block';
-
-document.getElementById('menu-sobre').classList.add('item__ativo');
+let secaoAtiva;
+let artigoAtivo;
 
 function toggleSubMenu(){
-    setaSubMenu.classList.toggle('seta__rodada');
-    subMenu.classList.toggle('submenu__aparece');
+        setaSubMenu.classList.toggle('seta__rodada');
+        subMenu.classList.toggle('submenu__aparece');
 }
 
 function abreSubMenu(){
@@ -56,48 +35,95 @@ function MostraArtigo(articleId) {
     if (novoArtigo !== artigoAtivo){
         artigoAtivo.style.display = 'none';
         novoArtigo.style.display = 'block';
-        artigoAtivo = novoArtigo
+        artigoAtivo = novoArtigo;
+
+        document.getElementById('titulo-conteudo').textContent = novoArtigo.dataset.titulo
+
         scrollTo(0,0);
     }
 }
 
-setaSubMenu.addEventListener('click', function(event){
-    event.stopPropagation();
-    toggleSubMenu();
-});
+async function carregarConteudos(){
+    const resposta = await fetch("conteudos.json");
+    const dados = await resposta.json();
 
-botoesMenu.forEach(botao => {
-    botao.addEventListener('click', function(){
-        botoesMenu.forEach(botao => {
-            botao.classList.remove('item__ativo');
-        });
-        botoesSubMenu.forEach(botao => {
-            botao.classList.remove('submenu__ativo');
-        });
-        botao.classList.add('item__ativo');
-        const idBotao = botao.id.replace('menu', 'conteudo');
-        MostraSecao(idBotao);
-        if(idBotao === 'conteudo-disciplina'){
-            MostraArtigo('conteudo-visaogeral');
-            abreSubMenu();
-        }else{
-            fechaSubMenu();
-        } 
-    });
-});
+    for(const item of dados.conteudos){
+        const article = document.createElement('article');
+        article.classList.add('conteudo__artigo');
+        article.id = 'conteudo-' + item.id;
+        article.style.display = 'none';
+        article.dataset.titulo = item.titulo;
+        const conteudoMD = await (await fetch(item.arquivo)).text();
+        article.innerHTML =  marked.parse(conteudoMD);
+        secaoDisciplina.appendChild(article);
 
-botoesSubMenu.forEach(botao => {
-    botao.addEventListener('click', function(){
-        botoesMenu.forEach(botao => {
-            botao.classList.remove('item__ativo');
-        });
-        botaoAlgoritmos.classList.add('item__ativo');
-        botoesSubMenu.forEach(botao => {
-            botao.classList.remove('submenu__ativo');
-        });
-        botao.classList.add('submenu__ativo');
-        const idBotao = botao.id.replace('menu', 'conteudo');
-        MostraArtigo(idBotao);
-        MostraSecao('conteudo-disciplina');   
+        if(item.id === 'visaogeral'){
+            continue;
+        }
+        const li = document.createElement('li');
+        li.classList.add('submenu__item');
+        li.id = 'menu-' + item.id;
+        li.textContent = item.titulo; 
+        subMenu.appendChild(li);
+    }
+}
+
+function inicializarEventos(){
+    const botoesMenu = document.querySelectorAll('.menu__item');
+    const botoesSubMenu = document.querySelectorAll('.submenu__item');
+    const botaoAlgoritmos = document.getElementById('menu-disciplina');
+
+    secaoAtiva = document.getElementById('conteudo-sobre');
+    secaoAtiva.style.display = 'block';
+    artigoAtivo = document.getElementById('conteudo-visaogeral');
+    artigoAtivo.style.display = 'block';
+    document.getElementById('menu-sobre').classList.add('item__ativo');
+
+    setaSubMenu.addEventListener('click', function(event){
+        event.stopPropagation();
+        toggleSubMenu();
     });
-});
+
+    botoesMenu.forEach(botao => {
+        botao.addEventListener('click', function(){
+            botoesMenu.forEach(botao => {
+                botao.classList.remove('item__ativo');
+            });
+            botoesSubMenu.forEach(botao => {
+                botao.classList.remove('submenu__ativo');
+            });
+            botao.classList.add('item__ativo');
+            const idBotao = botao.id.replace('menu', 'conteudo');
+            MostraSecao(idBotao);
+            if(idBotao === 'conteudo-disciplina'){
+                MostraArtigo('conteudo-visaogeral');
+                abreSubMenu();
+            }else{
+                fechaSubMenu();
+            } 
+        });
+    });
+
+    botoesSubMenu.forEach(botao => {
+        botao.addEventListener('click', function(){
+            botoesMenu.forEach(botao => {
+                botao.classList.remove('item__ativo');
+            });
+            botaoAlgoritmos.classList.add('item__ativo');
+            botoesSubMenu.forEach(botao => {
+                botao.classList.remove('submenu__ativo');
+            });
+            botao.classList.add('submenu__ativo');
+            const idBotao = botao.id.replace('menu', 'conteudo');
+            MostraArtigo(idBotao);
+            MostraSecao('conteudo-disciplina');   
+        });
+    });
+}
+
+async function iniciar(){
+    await carregarConteudos();
+    inicializarEventos();
+}
+
+iniciar();
