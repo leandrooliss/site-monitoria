@@ -1,7 +1,7 @@
 # 📘 Monitoria de Algoritmos e Lógica de Programação
 
 Site desenvolvido para apoiar a monitoria da disciplina **Algoritmos e Lógica de Programação** da Fatec Rubens Lara (ADS).  
-O objetivo é fornecer aos estudantes um espaço organizado com informações sobre monitoria, conteúdos teóricos, exemplos práticos, listas de exercícios e horários de atendimento.
+O objetivo é fornecer aos estudantes um espaço organizado com informações sobre monitoria, conteúdos teóricos, exemplos práticos, listas de exercícios e horários de atendimento. 
 
 ---
 
