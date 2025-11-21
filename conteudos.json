@@ -1,0 +1,24 @@
+{
+    "conteudos": [
+        {
+            "id": "visaogeral",
+            "titulo": "Visão Geral",
+            "arquivo": "conteudo/visaogeral.md"
+        },
+        {
+            "id": "algoritmos",
+            "titulo": "Algoritmos",
+            "arquivo": "conteudo/algoritmos.md"
+        },
+        {
+            "id": "logica",
+            "titulo": "Lógica de Programação",
+            "arquivo": "conteudo/logica.md"
+        },
+        {
+            "id": "estrutura-controle",
+            "titulo": "Estruturas de Controle",
+            "arquivo": "conteudo/estrutura-controle.md"
+        }
+    ]
+}

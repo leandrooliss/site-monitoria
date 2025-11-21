@@ -1,4 +1,3 @@
-## Algoritmos<br><br>
 Um **algoritmo** é uma sequência finita de passos bem definidos que descrevem como resolver um problema ou realizar uma tarefa. Ele funciona como uma receita: se seguido corretamente, leva a um resultado esperado.<br><br>
 ### Características de um bom algoritmo:<br><br>
 - **Não ambiguidade:** os passos não podem gerar interpretações diferentes.

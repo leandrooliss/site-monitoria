@@ -1,4 +1,5 @@
 /* MENU PRINCIPAL -------------------------------------------------------------------------*/
+
 .container__menu{
     background-color: var(--cor-fundo-div);
     border-right: 1px solid lightgrey;
@@ -42,21 +43,21 @@
 
 .menu__submenu{
     grid-column: 1 / -1;
-    padding: 0 2.2rem;
+    padding: 0 1.5rem 0 3rem;
     margin-bottom: 0.5rem;
-    display: none; /* Começa escondido, é mostrado com JS */
+    display: none;
 }
 
-/* Itens individuais do submenu (carregados automaticamente do JSON) */
+/* Itens do Submenu */
+
 .submenu__item{
+    font-size: 0.9rem;
     cursor: pointer;
     position: relative;
-    padding-left: 0.6rem; /* Espaço pra barrinha lateral */
-    transition: color 0.2 ease;
-    white-space: normal; /* permite quebra de linha */
-    word-wrap: break-word; /* Garante quebra mesmo em palavras longas */
-    line-height: 1.4; /* Dá um pouco mais de espaçamento entre as linhas */
-    max-width: 150px; /* Mantém o submenu dentro de um limite fixo */
+    line-height: 1.3;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 150px;
 }
 
 .submenu__item:not(:last-child){
@@ -64,29 +65,26 @@
 }
 
 /* Barrinha lateral dinâmica (ativa e hover) */
-.submenu__item::before {
+
+.submenu__item::before{
     content: "";
     position: absolute;
-    left: 0;
     top: 0;
-    bottom: 0; /* Faz a barrinha cobrir a altura total, mesmo com 2+ linhas */
+    left: -10px;
+    bottom: 0;
     width: 3px;
-    background: transparent;
-    transition: background 0.25s ease;
+    background-color: none;
+    transition: background-color .25s ease;
 }
 
-/* Quando passa o mouse, a barrinha aparece */
 .submenu__item:hover::before{
     background-color: var(--cor-hover);
 }
 
-
-/* Quando o item está ativo, a barrinha fica permanente */
-.submenu__ativo::before {
+.submenu__ativo::before{
     background-color: var(--cor-hover);
 }
 
-/* Cor de destaque no texto ao passar o mouse ou quando ativo */
 .submenu__item:hover, .submenu__ativo{
     color: var(--cor-fonte);
 }

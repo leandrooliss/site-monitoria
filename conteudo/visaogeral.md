@@ -1,5 +1,3 @@
-## Visão Geral<br><br>
-
 Esta disciplina introduz os conceitos fundamentais de algoritmos e lógica de programação, preparando os alunos para desenvolver soluções computacionais estruturadas. Os principais tópicos abordados incluem:<br><br>
 
 - **Algoritmos:** Definição, características, exemplos práticos e formas de representação como fluxogramas, pseudocódigo e descrição narrativa.  

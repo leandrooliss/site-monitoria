@@ -1,4 +1,3 @@
-## Estrutura de Controle<br><br>
 As estruturas de controle são responsáveis por definir o caminho que o programa deve seguir durante sua execução. Elas permitem tomar decisões e repetir ações com base em condições específicas.<br><br>
 
 ### Tipos principais:<br><br>

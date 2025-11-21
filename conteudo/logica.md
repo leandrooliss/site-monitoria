@@ -1,4 +1,3 @@
-## Lógica de Programação<br><br>
 A lógica de programação é a base para construir algoritmos e desenvolver programas. Ela envolve o raciocínio necessário para organizar instruções de forma que resolvam um problema de maneira eficiente e estruturada.<br><br>
 
 ### Conceitos fundamentais:<br><br>
